@@ -49,10 +49,6 @@
   },
   {
     "name": "Beyza Cetin",
-    "affiliation": "Missouri University Science and Technology"
-  },
-  {
-    "name": "Beyza Cetin",
     "affiliation": "Missouri University Of Science and Technology"
   },
   {
@@ -229,11 +225,8 @@
   },
   {
     "name": "Tulin Kaman",
-    "affiliation": "University Of Arkansas"
-  },
-  {
-    "name": "Tulin Kaman",
-    "affiliation": "University Of Zurich and University Of Arkansas"
+    "affiliation": "University Of Zurich and University Of Arkansas",
+    "localOrganizer": true
   },
   {
     "name": "Chamika Kankanamge",
@@ -508,10 +501,6 @@
     "affiliation": "University Of Missouri-kansas City"
   },
   {
-    "name": "Rachidi B. Salako",
-    "affiliation": "University Of Nevada Las Vegas"
-  },
-  {
     "name": "Rachidi Salako",
     "affiliation": "University Of Nevada, Las Vegas"
   },
@@ -628,10 +617,6 @@
     "affiliation": "University Of Maryland, Baltimore County"
   },
   {
-    "name": "Justin Webster",
-    "affiliation": "University Of Maryland, Baltimore County"
-  },
-  {
     "name": "Xiaoqi Wei",
     "affiliation": "North Carolina State University"
   },
@@ -742,5 +727,36 @@
   {
     "name": "Ahmed Zytoon",
     "affiliation": "Oklahoma State University"
+  }
+  ,
+  {
+    "name": "Beatrice Riviere",
+    "affiliation": "Rice University",
+    "plenary": true
+  },
+  {
+    "name": "Irena Lasiecka",
+    "affiliation": "University of Memphis",
+    "plenary": true
+  },
+  {
+    "name": "Xiu Ye",
+    "affiliation": "University of Arkansas at Little Rock",
+    "plenary": true
+  },
+  {
+    "name": "Zachary Bradshaw",
+    "affiliation": "University Of Arkansas",
+    "localOrganizer": true
+  },
+  {
+    "name": "Jiahui Chen",
+    "affiliation": "University Of Arkansas",
+    "localOrganizer": true
+  },
+  {
+    "name": "Chen Liu",
+    "affiliation": "University Of Arkansas",
+    "localOrganizer": true
   }
 ]

@@ -13,11 +13,20 @@ export default function ProgramPage() {
 
   const speakers = useMemo(() => {
     const arr = Array.isArray(participantsData) ? participantsData : []
-    return arr.map((s) => ({
-      name: (s?.name || '').trim(),
-      affiliation: (s?.affiliation || '').trim(),
-      email: (s?.email || '').trim(),
-    })).filter((s) => s.name.length > 0)
+    return arr
+      .map((s) => ({
+        name: (s?.name || '').trim(),
+        affiliation: (s?.affiliation || '').trim(),
+        email: (s?.email || '').trim(),
+        plenary: Boolean(s?.plenary),
+        localOrganizer: Boolean(s?.localOrganizer),
+      }))
+      .filter((s) => s.name.length > 0)
+      .sort((a, b) => {
+        if (a.plenary !== b.plenary) return a.plenary ? -1 : 1
+        if (a.localOrganizer !== b.localOrganizer) return a.localOrganizer ? -1 : 1
+        return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' })
+      })
   }, [])
 
   const filtered = useMemo(() => {
@@ -65,7 +74,15 @@ export default function ProgramPage() {
           <ul className="divide-y">
             {filtered.map((s, i) => (
               <li key={i} className="p-4">
-                <div className="font-medium">{s.name}</div>
+                <div className="font-medium flex items-center gap-2">
+                  <span>{s.name}</span>
+                  {s.plenary && (
+                    <span className="text-xs px-2 py-0.5 rounded-full border bg-amber-50 border-amber-200 text-amber-800">Plenary</span>
+                  )}
+                  {!s.plenary && s.localOrganizer && (
+                    <span className="text-xs px-2 py-0.5 rounded-full border bg-blue-50 border-blue-200 text-blue-800">Local Organizer</span>
+                  )}
+                </div>
                 {s.affiliation && (
                   <div className="text-sm text-neutral-700">{s.affiliation}</div>
                 )}
